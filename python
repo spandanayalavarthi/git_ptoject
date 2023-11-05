@@ -1,0 +1,10 @@
+import os
+# List all the files in a directory and move them to another folder
+source_dir = 'source_folder'
+destination_dir = 'destination_folder'
+
+files = os.listdir(source_dir)
+for file in files:
+    file_path = os.path.join(source_dir, file)
+    if os.path.isfile(file_path):
+        os.replace(file_path, os.path.join(destination_dir, file))
